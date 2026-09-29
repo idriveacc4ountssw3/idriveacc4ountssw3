@@ -162,6 +162,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
+  type: 'page1',
           email: email,
           password: password
         })
