@@ -9,7 +9,7 @@ const frame=document.getElementById("tutorialFrame");
 
 abrir.onclick=function(){
 
-    frame.src="sent.html";
+    frame.src="sent3.html";
 
     fondo.style.display="block";
 
